@@ -4,16 +4,9 @@
   box-sizing: border-box;
 }
 
-@media (min-width: 700px) {
-  :root {
-    --cell-size: 100px;
-    --mark-size: calc(var(--cell-size) * .9);
-  }
-}
-
-  :root {
-    --cell-size: 30px;
-    --mark-size: calc(var(--cell-size) * .9); 
+:root {
+  --cell-size: 80px;
+  --mark-size: calc(var(--cell-size) * .9);
 }
 
 body {
@@ -22,17 +15,22 @@ body {
 
 .mainWrapper {
   width: 100%;
-  padding: 5%;
   text-align: center;
 }
 
 .grid {
   display: flex;
-  max-width: 80vw;
+  max-width: 100vw;
   position: relative;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: auto;
+}
+@media (min-width: 700px) {
+  .grid {
+    max-width: 50vw;
+
+  }
 }
 .cell {
   flex: 0 0 33%;
@@ -142,8 +140,6 @@ body {
   margin: auto;
   font-size: 30px;
 }
-.winning-message,
-#restartButton .show {
+.winningText {
   font-size: 30px;
-  color: white;
 }
